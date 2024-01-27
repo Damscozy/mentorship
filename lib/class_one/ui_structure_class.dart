@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class UIStructureClass extends StatefulWidget {
+  const UIStructureClass({super.key});
 
+  final String routes = '/class-one';
   @override
-  State<HomePage> createState() => _MyHomePageState();
+  State<UIStructureClass> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<HomePage> {
+class _MyHomePageState extends State<UIStructureClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +22,8 @@ class _MyHomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
+              //////////// START ///////////
+              // ': ! ?? ?',
               //SECTION ONE
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,23 +62,26 @@ class _MyHomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+              //SECTION TWO SPACE
               const SizedBox(
                 height: 30,
               ),
               //SECTION TWO
               Container(
-                padding: const EdgeInsets.all(15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
                       Colors.blue,
-                      Colors.lightBlue,
+                      // Colors.lightBlue,
                       Colors.greenAccent,
                       Colors.black45,
                       Colors.black87,
+                      Colors.black,
                     ],
                   ),
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -132,10 +138,11 @@ class _MyHomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              //SECTION THREE
+              //SECTION THREE SPACE
               const SizedBox(
                 height: 30,
               ),
+              //SECTION THREE
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -201,10 +208,11 @@ class _MyHomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              //SECTION FOUR
+              //SECTION FOUR SPACE
               const SizedBox(
                 height: 30,
               ),
+              //SECTION FOUR
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -232,10 +240,11 @@ class _MyHomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              //SECTION FIVE
+              //SECTION FIVE SPACE
               const SizedBox(
                 height: 20,
               ),
+              //SECTION FIVE
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -529,6 +538,7 @@ class _MyHomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              ////////////// END. //////////////
             ],
           ),
         ),
