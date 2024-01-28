@@ -142,63 +142,23 @@ class _MyHomePageState extends State<Reuseables> {
                 height: 30,
               ),
               //SECTION THREE
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const ActionButton(
+                  ActionButton(
                     title: 'Sell',
                     iconData: Icons.send,
                     color: Colors.blue,
                   ),
-                  const ActionButton(
+                  ActionButton(
                     title: 'Buy',
                     iconData: Icons.money,
                     color: Colors.black,
                   ),
-                  const ActionButton(
+                  ActionButton(
                     title: 'Exchange',
                     iconData: Icons.download,
                     color: Colors.green,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: const BoxDecoration(
-                          color: Colors.black,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.money,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      const Text('Buy'),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: const BoxDecoration(
-                          color: Colors.yellow,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.download,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      const Text('Test'),
-                    ],
                   ),
                 ],
               ),
@@ -206,7 +166,6 @@ class _MyHomePageState extends State<Reuseables> {
               const SizedBox(
                 height: 30,
               ),
-
               //SECTION FOUR
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
