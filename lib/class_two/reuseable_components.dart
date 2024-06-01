@@ -180,25 +180,10 @@ class _MyHomePageState extends State<Reuseables> {
                       const Text('Buy'),
                     ],
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: const BoxDecoration(
-                          color: Colors.yellow,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.download,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      const Text('Test'),
-                    ],
+                  const TextCard(
+                    text: 'Godson',
+                    icon: Icons.abc,
+                    color: Colors.blue,
                   ),
                 ],
               ),
@@ -275,6 +260,42 @@ class _MyHomePageState extends State<Reuseables> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class TextCard extends StatelessWidget {
+  final String text;
+  final IconData icon;
+  final Color color;
+  const TextCard({
+    super.key,
+    required this.text,
+    required this.icon,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(15),
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+          ),
+          child: Center(
+            child: Icon(
+              icon,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        Text(text),
+      ],
     );
   }
 }
