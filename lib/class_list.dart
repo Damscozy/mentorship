@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mentorship/class_three/package_migrate/svg.dart';
 
 import 'class_one/ui_structure_class.dart';
+import 'class_three/package_class.dart';
 import 'class_two/reuseable_components.dart';
 
 class ClassList extends StatelessWidget {
@@ -9,12 +12,20 @@ class ClassList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Class List'),
       ),
       body: ListView(
         padding: const EdgeInsets.all(15),
         children: [
+          SvgPicture.asset(
+            'assets/svgs/top_pattern.svg',
+            colorFilter: const ColorFilter.mode(
+              Colors.black,
+              BlendMode.srcIn,
+            ),
+          ),
           itemList(
             title: 'Class One',
             onTap: () {
@@ -38,7 +49,7 @@ class ClassList extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const UIStructureClass()),
+                MaterialPageRoute(builder: (_) => const PackageClass()),
               );
             },
           ),
