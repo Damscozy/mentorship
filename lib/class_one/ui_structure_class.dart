@@ -9,6 +9,25 @@ class UIStructureClass extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<UIStructureClass> {
+  int counter = 0;
+  void _incrementCounter() {
+    try {
+      if (mounted) {
+        setState(() {
+          counter++;
+        });
+      } else if (!mounted) {
+        setState(() {
+          counter--;
+        });
+      } else {
+        debugPrint('Error');
+      }
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +49,7 @@ class _MyHomePageState extends State<UIStructureClass> {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.4),
-                        borderRadius: BorderRadius.circular(20)),
+                    decoration: BoxDecoration(color: Colors.grey.withOpacity(0.4), borderRadius: BorderRadius.circular(20)),
                     child: Row(
                       children: [
                         Container(
@@ -68,8 +85,7 @@ class _MyHomePageState extends State<UIStructureClass> {
               ),
               //SECTION TWO
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
@@ -224,8 +240,7 @@ class _MyHomePageState extends State<UIStructureClass> {
                     ),
                   ),
                   Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.grey.withOpacity(0.4),

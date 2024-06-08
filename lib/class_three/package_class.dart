@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:mentorship/class_three/package_migrate/svg.dart';
-// import 'package:flutter_svg/svg.dart';
 
 class PackageClass extends StatefulWidget {
   const PackageClass({super.key});
